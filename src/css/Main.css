@@ -1,0 +1,11 @@
+.mainBody {
+    display: grid;
+    grid-template-columns: auto 1fr;    
+}
+
+ @media (max-width: 632px) {
+    .mainBody {
+        display: flex;
+        flex-direction: column-reverse;
+    }    
+} 

@@ -1,0 +1,10 @@
+.photoListMain {
+    background-color: aquamarine;
+}
+
+.photoListCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 15px;
+}
