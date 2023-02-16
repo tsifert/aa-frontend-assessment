@@ -15,6 +15,14 @@ export interface Photo {
     sizeInBytes: number;
     updatedAt: Date;
     uploadedBy: string;
+    url: string;
+}
+
+export interface PhotosState {
+    photos: Photo[];
+    selectedId: string | null;
+    loading: boolean;
+    error: string | null;
 }
 
 export const PHOTO_API_URL = 'https://agencyanalytics-api.vercel.app/images.json';

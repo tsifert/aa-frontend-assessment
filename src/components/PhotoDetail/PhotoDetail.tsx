@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import '../css/PhotoDetail.css';
+import './PhotoDetail.css';
 
 const PhotoDetail = (): ReactElement => {
 

@@ -1,0 +1,9 @@
+.errorMessage {
+    color: #ff0000;
+    position: absolute;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-content: center;    
+}

@@ -1,0 +1,13 @@
+.photoListMain {
+    background-color: #F7FAFC;
+    border-right: 2px solid #E2E8F0;
+    padding: 0 25px;
+}
+
+.photoListCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 25px;
+}
