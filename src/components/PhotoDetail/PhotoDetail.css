@@ -1,4 +1,46 @@
 .photoDetailMain {
-    background-color: blue;
-    width: 350px;
+    width: 360px;
+    padding: 40px 20px;
 }
+
+.photoDetailPicture {
+    display: flex;
+    justify-content: center;
+}
+
+.photoDetailPicture img {
+    height: 260px;
+    width: 360px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+@media (max-width: 632px) {
+
+    .photoDetailMain {
+        width: 100%;  
+        padding: 20px 10px;      
+    }    
+
+    .photoDetailPicture img {
+        width: 70%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    
+} 
+
+.photoDetailTitle {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+.photoDetailTitle h3 {
+    margin-bottom:  0;
+}
+
+.photoDetailTitle span {
+    margin-top:  10px;
+}
+

@@ -6,9 +6,10 @@
     cursor: pointer;
     opacity: 0.6;
     transform: scale(1.02) translateY(-2px);
+    transition: 0.2s;
 }
 
-.photoCardPicture img{
+.photoCardPicture img {
     height: 130px;
     width: 180px;
     object-fit: cover;
@@ -17,7 +18,15 @@
     border: 2px solid transparent;
 }
 
-.photoCardPicture-selected img{
+@media (max-width: 1000px) {
+    
+    .photoCardPicture img{
+        height: 100px;
+        width: 150px;
+    }
+} 
+
+.photoCardPicture-selected img {
     border: 2px solid #0000ff;
 }
 

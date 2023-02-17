@@ -32,14 +32,24 @@ export const photoSlice = createSlice({
             state.photos = payload;
         },
 
-        setLoadFailed: (state, { payload }: PayloadAction<string>) => {
+        setLoadFailed: (state, {
+            payload }: PayloadAction<string>) => {
             state.loading = false;
             state.error = payload;
         },
+
+        toggleFavoritePhoto: (state, {
+            payload }: PayloadAction<string>) => {
+
+            const photo = state.photos.find((photo) => photo.id === payload);
+            if (photo) {
+                photo.favorited = !photo.favorited;
+            }
+        }
     }
 });
 
-export const { setLoading, setSelectedPhoto, setLoadSuccess, setLoadFailed } = photoSlice.actions;
+export const { setLoading, setSelectedPhoto, setLoadSuccess, setLoadFailed, toggleFavoritePhoto } = photoSlice.actions;
 export default photoSlice.reducer;
 
 export const photoSelector = (state: {
@@ -73,3 +83,8 @@ export const setSelectedPhotoId = (photoId: string) => {
     };
 };
 
+export const toggleFavoritePhotoId = (photoId: string) => {
+    return async (dispatch: Dispatch) => {
+        dispatch(toggleFavoritePhoto(photoId));
+    };
+};

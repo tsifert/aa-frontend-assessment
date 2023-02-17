@@ -6,7 +6,6 @@ import './PhotoCard.css';
 interface PhotoCardProps {
     photo: Photo;
     selected: boolean;
-    //photoClicked: (id: string) => void;
 }
 
 const PhotoCard = (props: PhotoCardProps): ReactElement => {
@@ -18,8 +17,7 @@ const PhotoCard = (props: PhotoCardProps): ReactElement => {
             onClick={(e: React.MouseEvent<HTMLDivElement>) => {
                 e.preventDefault();
                 dispatch(setSelectedPhotoId(props.photo.id));
-            }}
-        >
+            }}>
 
             <section className={`photoCardPicture${props.selected ? ' photoCardPicture-selected' : ''}`}>
                 <img src={props.photo.url} />
@@ -34,7 +32,8 @@ const PhotoCard = (props: PhotoCardProps): ReactElement => {
             <section className="photoCardFilename">
                 {
                     Math.round(props.photo.sizeInBytes * 10 / 1048576) / 10
-                } MB
+                }
+                MB
             </section>
         </article>
     )

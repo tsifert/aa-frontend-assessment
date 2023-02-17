@@ -7,11 +7,10 @@ import { getPhotos, photoSelector, useAppDispatch } from '../../features/slices/
 import LoadingIndicator from '../LoadingIndicator/LoadingIndicator';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 
-
 const Main = (): ReactElement => {
 
     const dispatch = useAppDispatch();
-    const { photos, loading, error } = useSelector(photoSelector);
+    const { photos, selectedId, loading, error } = useSelector(photoSelector);
 
     useEffect(() => {
         document.title = 'AgencyAnalytics Front-End Challenge';
@@ -39,7 +38,8 @@ const Main = (): ReactElement => {
                 (photos && photos.length) &&
                 <section className="mainBody" >
                     <PhotoList />
-                    <PhotoDetail />
+                    <PhotoDetail
+                        photo={selectedId ? photos.find((photo) => photo.id === selectedId) : null} />
                 </section>
             }
         </main>

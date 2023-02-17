@@ -1,20 +1,36 @@
-import { ReactElement } from 'react';
+import { MouseEvent, ReactElement } from 'react';
+import { PhotoFilter } from '../../types/types';
 import './FilterTab.css';
 
+interface FilterTabProps {
+    selectedFilter: PhotoFilter;
+    filterClicked: (filter: PhotoFilter) => void;
+}
 
-const FilterTab = (): ReactElement => {
+const FilterTab = (props: FilterTabProps): ReactElement => {
 
     return (
-        <div className="filterTab">
-            <div className="filterTabButton filterTabButton-selected">
+        <article className="filterTab">
+
+            <section
+                className={`filterTabButton${props.selectedFilter === 'RECENTLY_ADDED' ? ' filterTabButton-selected' : ''}`}
+                onClick={(e: MouseEvent<HTMLElement>) => {
+                    e.preventDefault();
+                    props.filterClicked('RECENTLY_ADDED');
+                }}>
                 Recently Added
-            </div>
+            </section>
 
-            <div className="filterTabButton">
+            <section
+                className={`filterTabButton${props.selectedFilter === 'FAVORITED' ? ' filterTabButton-selected' : ''}`}
+                onClick={(e: MouseEvent<HTMLElement>) => {
+                    e.preventDefault();
+                    props.filterClicked('FAVORITED');
+                }}>
                 Favorited
-            </div>
+            </section>
 
-        </div>
+        </article>
     )
 
 };

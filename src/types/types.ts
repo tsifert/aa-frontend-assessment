@@ -27,4 +27,5 @@ export interface PhotosState {
 
 export const PHOTO_API_URL = 'https://agencyanalytics-api.vercel.app/images.json';
 
+export type PhotoFilter = 'RECENTLY_ADDED' | 'FAVORITED';
 
