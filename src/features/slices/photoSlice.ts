@@ -9,7 +9,7 @@ const initialState: PhotosState = {
     selectedId: null,
     loading: false,
     error: null,
-}
+};
 
 export const photoSlice = createSlice({
     name: 'photos',

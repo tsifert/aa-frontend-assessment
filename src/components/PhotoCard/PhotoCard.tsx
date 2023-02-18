@@ -36,7 +36,8 @@ const PhotoCard = (props: PhotoCardProps): ReactElement => {
                 }
             </section>
         </article>
-    )
+    );
+
 };
 
 export default PhotoCard;

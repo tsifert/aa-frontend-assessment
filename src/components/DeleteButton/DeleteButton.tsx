@@ -17,8 +17,8 @@ const DeleteButton = (props: DeleteButtonProps): ReactElement => {
                 Delete
             </button>
         </article>
-    )
+    );
 
-}
+};
 
 export default DeleteButton;

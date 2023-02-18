@@ -14,7 +14,8 @@ const LoadingIndicator = (): ReactElement => {
                 <circle className="spinner_2 spinner_3" cx="12" cy="12" r="3" />
                 <circle className="spinner_2 spinner_4" cx="20" cy="12" r="3" /></svg>
         </div>
-    )
+    );
+
 };
 
 export default LoadingIndicator;

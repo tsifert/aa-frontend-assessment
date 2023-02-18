@@ -112,7 +112,8 @@ const PhotoDetail = (props: PhotoDetailProps): ReactElement => {
 
 
         </article>
-    )
+    );
+
 };
 
 export default PhotoDetail;

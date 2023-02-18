@@ -41,7 +41,7 @@ const PhotoList = (): ReactElement => {
                                             key={photo.id}
                                             selected={selectedId === photo.id}
                                             photo={photo} />
-                                    )
+                                    );
                                 }
                             })
                         :
@@ -57,7 +57,7 @@ const PhotoList = (): ReactElement => {
             </section>
         </article>
 
-    )
+    );
 };
 
 export default PhotoList;

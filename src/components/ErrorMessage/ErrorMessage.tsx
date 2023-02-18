@@ -23,7 +23,8 @@ const ErrorMessage = (props: ErrorMessageProps): ReactElement => {
                 }
             </h3>
         </div>
-    )
+    );
+
 };
 
 export default ErrorMessage;
