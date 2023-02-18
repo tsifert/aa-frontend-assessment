@@ -10,7 +10,7 @@ interface ErrorMessageProps {
 const ErrorMessage = (props: ErrorMessageProps): ReactElement => {
 
     return (
-        <div className="errorMessage">
+        <article className="errorMessage">
             <h2>
                 There was an error accessing the API
             </h2>
@@ -22,7 +22,7 @@ const ErrorMessage = (props: ErrorMessageProps): ReactElement => {
                     props.message
                 }
             </h3>
-        </div>
+        </article>
     );
 
 };

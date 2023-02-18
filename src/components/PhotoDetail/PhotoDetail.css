@@ -1,5 +1,4 @@
-.photoDetailMain {
-    width: 360px;
+.photoDetailMain {    
     padding: 40px 20px;
     box-sizing: border-box;
 }
@@ -59,4 +58,9 @@
 
 .photoDetailDescription section:last-child {
     color: #64748B;
+}
+
+.photoDetailPlaceholder {
+    width: 360px;
+    padding-top: 45px;
 }

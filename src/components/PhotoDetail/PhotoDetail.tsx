@@ -18,96 +18,90 @@ const PhotoDetail = (props: PhotoDetailProps): ReactElement => {
         <article className="photoDetailMain">
 
             {
-                props.photo &&
-                <>
+                props.photo
+                    ?
+                    <>
 
-                    <section className="photoDetailPicture">
-                        <img src={props.photo.url} />
-                    </section>
-
-                    <section className="photoDetailTitle">
-
-                        <section>
-                            <h3>
-                                {
-                                    props.photo.filename
-                                }
-                            </h3>
-
-                            <span>
-                                {
-                                    `${Math.round(props.photo.sizeInBytes * 10 / 1048576) / 10} MB`
-                                }
-                            </span>
+                        <section className="photoDetailPicture">
+                            <img src={props.photo.url} />
                         </section>
 
-                        <section>
-                            <FavoriteButton
-                                photo={props.photo} />
+                        <section className="photoDetailTitle">
+
+                            <section>
+                                <h3>
+                                    {
+                                        props.photo.filename
+                                    }
+                                </h3>
+
+                                <span>
+                                    {
+                                        `${Math.round(props.photo.sizeInBytes * 10 / 1048576) / 10} MB`
+                                    }
+                                </span>
+                            </section>
+
+                            <section>
+                                <FavoriteButton
+                                    photo={props.photo} />
+                            </section>
+
                         </section>
 
-                    </section>
-
-                    <section>
                         <section>
                             <PhotoDetailEntry
                                 firstText=""
                                 secondText="Information" />
-                        </section>
 
-                        <section>
                             <PhotoDetailEntry
                                 firstText="Uploaded by"
                                 secondText={props.photo.uploadedBy} />
-                        </section>
 
-                        <section>
                             <PhotoDetailEntry
                                 firstText="Created"
                                 secondText={new Date(props.photo.createdAt).toDateString()} />
-                        </section>
 
-                        <section>
                             <PhotoDetailEntry
                                 firstText="Dimensions"
                                 secondText={
                                     `${props.photo.dimensions.width} x ${props.photo.dimensions.height}`} />
-                        </section>
 
-                        <section>
                             <PhotoDetailEntry
                                 firstText="Resolution"
                                 secondText={
                                     `${props.photo.resolution.width} x ${props.photo.resolution.height}`} />
+
                         </section>
+                        <section className="photoDetailDescription">
 
-                    </section>
-                    <section className="photoDetailDescription">
+                            <section>
+                                Description
+                            </section>
 
-                        <section>
-                            Description
-                        </section>
-
-                        <section>
-                            {
-                                props.photo.description
-                            }
-                        </section>
-
-                    </section>
-
-                    <section>
-                        <DeleteButton
-                            onClick={() => {
-                                console.log('click', props.photo?.id);
-                                if (props.photo) {
-                                    dispatch(deletePhotoId(props.photo.id));
+                            <section>
+                                {
+                                    props.photo.description
                                 }
-                            }}
-                        />
-                    </section>
+                            </section>
 
-                </>
+                        </section>
+
+                        <section>
+                            <DeleteButton
+                                onClick={() => {
+                                    if (props.photo) {
+                                        dispatch(deletePhotoId(props.photo.id));
+                                    }
+                                }}
+                            />
+                        </section>
+
+                    </>
+                    :
+                    <section className="photoDetailPlaceholder">
+                        <h3>Click a picture to view details</h3>
+                    </section>
             }
 
 

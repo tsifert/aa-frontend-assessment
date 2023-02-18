@@ -1,6 +1,9 @@
 .favoriteButton {
     padding: 2px 5px;
     display: inline-block;
+    background-color: transparent;
+    border-style: none;
+    transition: 0.2s;
 }
 
 .favoriteButton:hover {

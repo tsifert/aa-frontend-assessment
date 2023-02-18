@@ -25,7 +25,11 @@ export interface PhotosState {
     error: string | null;
 }
 
-export const PHOTO_API_URL = 'https://agencyanalytics-api.vercel.app/images.json';
+export const PHOTO_API_URL =
+    `https://agencyanalytics-api.vercel.app/images${location.search.toLowerCase() === '?force-error' ? 'error' : ''}.json`;
+
+// export const PHOTO_API_URL =
+// `https://agencyanalytics-api.vercel.app/images${location.pathname.toLowerCase() === '/force-error' ? 'error' : ''}.json`;
 
 export type PhotoFilter = 'RECENTLY_ADDED' | 'FAVORITED';
 
