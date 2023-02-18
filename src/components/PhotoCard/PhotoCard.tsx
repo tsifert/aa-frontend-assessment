@@ -29,7 +29,7 @@ const PhotoCard = (props: PhotoCardProps): ReactElement => {
                 }
             </section>
 
-            <section className="photoCardFilename">
+            <section className="photoCardSize">
                 {
                     Math.round(props.photo.sizeInBytes * 10 / 1048576) / 10
                 }

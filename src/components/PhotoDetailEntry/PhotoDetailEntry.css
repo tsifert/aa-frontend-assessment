@@ -1,0 +1,17 @@
+.photoDetailEntry {
+    display: grid;
+    grid-template-columns: auto auto;
+    border-bottom: solid 1px #bbb;
+    padding: 10px 0 15px;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.photoDetailEntry section:first-child {
+    color: #64748B;
+}
+
+.photoDetailEntry section:last-child {
+    color: #000;
+}
+

@@ -28,20 +28,31 @@ const PhotoList = (): ReactElement => {
 
             <section className="photoListCards">
                 {
-                    [...photos].sort((a, b) => new Date(a.createdAt) > new Date(b.createdAt) ? -1 : 0)
-                        .map((photo) => {
-                            if (selectedFilter === 'FAVORITED' && !photo.favorited) {
-                                return null;
-                            }
-                            else {
-                                return (
-                                    <PhotoCard
-                                        key={photo.id}
-                                        selected={selectedId === photo.id}
-                                        photo={photo} />
-                                )
-                            }
-                        })
+                    (photos && photos.length)
+                        ?
+                        [...photos].sort((a, b) => new Date(a.createdAt) > new Date(b.createdAt) ? -1 : 0)
+                            .map((photo) => {
+                                if (selectedFilter === 'FAVORITED' && !photo.favorited) {
+                                    return null;
+                                }
+                                else {
+                                    return (
+                                        <PhotoCard
+                                            key={photo.id}
+                                            selected={selectedId === photo.id}
+                                            photo={photo} />
+                                    )
+                                }
+                            })
+                        :
+                        <section>
+                            <h3>
+                                There are no photos to display
+                            </h3>
+                            <h4>
+                                Refresh the page to reload all photos
+                            </h4>
+                        </section>
                 }
             </section>
         </article>

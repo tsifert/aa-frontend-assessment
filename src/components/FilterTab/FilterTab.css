@@ -20,7 +20,7 @@
 }
 
 .filterTabButton-selected {
-    font-weight: 600;
+    font-weight: bold;
     color: #0000ff;
     border-bottom: solid 2px #0000ff;
 }

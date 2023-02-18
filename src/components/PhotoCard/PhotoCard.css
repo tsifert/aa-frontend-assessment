@@ -31,11 +31,17 @@
 }
 
 .photoCardFilename {
-    font-weight: 600;
+    font-weight: bold;
     padding-left: 4px;
     overflow: hidden;  
     white-space: nowrap;
     text-overflow: ellipsis;
     display: inline-block;
     width: 188px;
+}
+
+.photoCardSize {
+    padding-left: 4px;
+    font-weight: bold;
+    color: #64748B;
 }

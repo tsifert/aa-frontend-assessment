@@ -21,7 +21,7 @@ const Main = (): ReactElement => {
     }, [dispatch]);
 
     return (
-        <main>
+        <main data-testid="main-check">
             {
                 loading &&
                 <LoadingIndicator />
@@ -35,12 +35,14 @@ const Main = (): ReactElement => {
             }
 
             {
-                (photos && photos.length) &&
-                <section className="mainBody" >
+                (!loading && !error) &&
+                <article className="mainBody" >
                     <PhotoList />
                     <PhotoDetail
-                        photo={selectedId ? photos.find((photo) => photo.id === selectedId) : null} />
-                </section>
+                        photo={
+                            selectedId ? photos.find((photo) => photo.id === selectedId) : null
+                        } />
+                </article>
             }
         </main>
     );
