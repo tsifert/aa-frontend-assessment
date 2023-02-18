@@ -14,6 +14,7 @@ const PhotoCard = (props: PhotoCardProps): ReactElement => {
 
     return (
         <article className={`photoCardMain${props.selected ? ' photoCard-selected' : ''}`}
+            data-testid="photoCardMain-check"
             onClick={(e: React.MouseEvent<HTMLDivElement>) => {
                 e.preventDefault();
                 dispatch(setSelectedPhotoId(props.photo.id));
@@ -31,9 +32,8 @@ const PhotoCard = (props: PhotoCardProps): ReactElement => {
 
             <section className="photoCardSize">
                 {
-                    Math.round(props.photo.sizeInBytes * 10 / 1048576) / 10
+                    `${Math.round(props.photo.sizeInBytes * 10 / 1048576) / 10} MB`
                 }
-                MB
             </section>
         </article>
     )

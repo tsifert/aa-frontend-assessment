@@ -10,9 +10,9 @@ const LoadingIndicator = (): ReactElement => {
                 <style>
 
                 </style>
-                <circle className="spinner_qM83" cx="4" cy="12" r="3" />
-                <circle className="spinner_qM83 spinner_oXPr" cx="12" cy="12" r="3" />
-                <circle className="spinner_qM83 spinner_ZTLf" cx="20" cy="12" r="3" /></svg>
+                <circle className="spinner_2" cx="4" cy="12" r="3" />
+                <circle className="spinner_2 spinner_3" cx="12" cy="12" r="3" />
+                <circle className="spinner_2 spinner_4" cx="20" cy="12" r="3" /></svg>
         </div>
     )
 };

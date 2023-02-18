@@ -7,20 +7,20 @@
     align-content: center;
 }
 
-.spinner_qM83{ 
-    animation:spinner_8HQG 1.05s infinite
+.spinner_2{ 
+    animation:spinner_1 1.05s infinite
 }
 
-.spinner_oXPr {
+.spinner_3 {
     animation-delay:.1s
 }
 
-.spinner_ZTLf {
+.spinner_4 {
     animation-delay:.2s
 }
 
 @keyframes 
-spinner_8HQG {
+spinner_1 {
     0%,57.14% {
         animation-timing-function:cubic-bezier(0.33,.66,.66,1);transform:translate(0)
     }

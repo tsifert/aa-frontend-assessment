@@ -27,7 +27,7 @@ const PhotoDetail = (props: PhotoDetailProps): ReactElement => {
 
                     <section className="photoDetailTitle">
 
-                        <div>
+                        <section>
                             <h3>
                                 {
                                     props.photo.filename
@@ -36,51 +36,52 @@ const PhotoDetail = (props: PhotoDetailProps): ReactElement => {
 
                             <span>
                                 {
-                                    Math.round(props.photo.sizeInBytes * 10 / 1048576) / 10
+                                    `${Math.round(props.photo.sizeInBytes * 10 / 1048576) / 10} MB`
                                 }
-                                MB
                             </span>
-                        </div>
+                        </section>
 
-                        <div>
+                        <section>
                             <FavoriteButton
                                 photo={props.photo} />
-                        </div>
+                        </section>
 
                     </section>
 
                     <section>
-                        <PhotoDetailEntry
-                            firstText=""
-                            secondText="Information" />
-                    </section>
+                        <section>
+                            <PhotoDetailEntry
+                                firstText=""
+                                secondText="Information" />
+                        </section>
 
-                    <section>
-                        <PhotoDetailEntry
-                            firstText="Uploaded by"
-                            secondText={props.photo.uploadedBy} />
-                    </section>
+                        <section>
+                            <PhotoDetailEntry
+                                firstText="Uploaded by"
+                                secondText={props.photo.uploadedBy} />
+                        </section>
 
-                    <section>
-                        <PhotoDetailEntry
-                            firstText="Created"
-                            secondText={new Date(props.photo.createdAt).toDateString()} />
-                    </section>
+                        <section>
+                            <PhotoDetailEntry
+                                firstText="Created"
+                                secondText={new Date(props.photo.createdAt).toDateString()} />
+                        </section>
 
-                    <section>
-                        <PhotoDetailEntry
-                            firstText="Dimensions"
-                            secondText={
-                                `${props.photo.dimensions.width} x ${props.photo.dimensions.height}`} />
-                    </section>
+                        <section>
+                            <PhotoDetailEntry
+                                firstText="Dimensions"
+                                secondText={
+                                    `${props.photo.dimensions.width} x ${props.photo.dimensions.height}`} />
+                        </section>
 
-                    <section>
-                        <PhotoDetailEntry
-                            firstText="Resolution"
-                            secondText={
-                                `${props.photo.resolution.width} x ${props.photo.resolution.height}`} />
-                    </section>
+                        <section>
+                            <PhotoDetailEntry
+                                firstText="Resolution"
+                                secondText={
+                                    `${props.photo.resolution.width} x ${props.photo.resolution.height}`} />
+                        </section>
 
+                    </section>
                     <section className="photoDetailDescription">
 
                         <section>

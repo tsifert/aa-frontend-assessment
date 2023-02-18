@@ -71,7 +71,6 @@ export const getPhotos = () => {
 
         try {
             const data = await axios.get(PHOTO_API_URL);
-            console.log(data);
             dispatch(setLoadSuccess(data.data));
         }
         catch (error: unknown) {

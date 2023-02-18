@@ -12,19 +12,19 @@ const PhotoList = (): ReactElement => {
     const [selectedFilter, setSelectedFilter] = useState<PhotoFilter>('RECENTLY_ADDED');
 
     return (
-        <article className="photoListMain">
-            <section>
+        <article className="photoListMain" data-testid="photoListMain-check">
+            <header>
                 <h2>
                     Photos
                 </h2>
-            </section>
+            </header>
 
-            <section>
+            <nav>
                 <FilterTab
                     selectedFilter={selectedFilter}
                     filterClicked={(filter) => setSelectedFilter(filter)}
                 />
-            </section>
+            </nav>
 
             <section className="photoListCards">
                 {
